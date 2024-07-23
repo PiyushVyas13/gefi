@@ -1,0 +1,8 @@
+{
+  "../node_modules/@catalogfi/wallets/dist/index8.js -> tiny-secp256k1": {
+    "id": "../node_modules/@catalogfi/wallets/dist/index8.js -> tiny-secp256k1",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_tiny-secp256k1_lib_index_js.js"
+    ]
+  }
+}
