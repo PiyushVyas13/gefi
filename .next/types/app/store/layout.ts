@@ -1,4 +1,4 @@
-// File: /Users/suyog/Desktop/gfi/demo-app/src/app/store/layout.tsx
+// File: C:\Users\jaipr\Desktop\Practice\gefi\src\app\store\layout.tsx
 import * as entry from '../../../../src/app/store/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

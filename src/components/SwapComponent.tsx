@@ -28,6 +28,7 @@ const SwapComponent: React.FC = () => {
     setAmount(newAmount);
   };
 
+
   return (
     <div className="swap-component">
       <WalletConnect />

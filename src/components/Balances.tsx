@@ -12,8 +12,11 @@ const Balances: React.FC = () => {
   const { isMMPopupOpen, isSigned, setIsSigned, setIsMMPopupOpen } =
     useSignStore();
 
+
+    console.log("HEELLO")
+
   const fetchBalance = useCallback(async () => {
-    if (!bitcoin || !evmProvider) return;
+    if (!bitcoin || !evmProvider) return null;
     if (isMMPopupOpen && !isSigned) return;
 
     let balance = 0;
@@ -48,6 +51,8 @@ const Balances: React.FC = () => {
 
   useEffect(() => {
     const id = setInterval(() => {
+      console.log(bitcoin);
+      console.log(evmProvider);
       fetchBalance();
     }, 10000);
 
@@ -56,9 +61,9 @@ const Balances: React.FC = () => {
     };
   }, [fetchBalance]);
 
-  useEffect(() => {
-    fetchBalance();
-  }, [fetchBalance]);
+  // useEffect(() => {
+  //   fetchBalance();
+  // }, [fetchBalance]);
 
   return (
     <div className="balances">

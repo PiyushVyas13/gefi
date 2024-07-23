@@ -1,12 +1,15 @@
-import SwapComponent from '@/components/SwapComponent';
-import Balances from '@/components/Balances';
 import { useGardenSetup } from '@/components/store';
+import { Suspense, lazy } from 'react';
 
 export default function Page() {
+  const Balances = lazy(() => import("../../../components/Balances"));
+  const SwapComponent = lazy(() => import("../../../components/SwapComponent"))
   return (
     <div id="container">
-      <Balances />
-      <SwapComponent />
+      <Suspense fallback={<div>Not loaded yet...</div>}>
+        <Balances />
+        <SwapComponent />
+      </Suspense>
     </div>
   );
 }
